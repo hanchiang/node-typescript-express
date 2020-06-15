@@ -37,7 +37,7 @@
     "format": "prettier --write \"**/*.+(ts|js|json)\"",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
-    "debug": "npm run build && npm run watch-debug",
+    "debug": "npm run watch-debug",
     "serve-debug": "nodemon --inspect dist/bin/www.js",
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
   },
@@ -45,6 +45,7 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "helmet": "^3.23.0",
     "lusca": "^1.6.1",
     "winston": "^3.2.1"
   },
@@ -52,9 +53,10 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/body-parser": "^1.17.1",
     "@types/chai": "^4.2.3",
-    "@types/concurrently": "^4.1.0",
+    "@types/concurrently": "^5.2.1",
     "@types/eslint": "^6.1.1",
     "@types/express": "^4.17.1",
+    "@types/helmet": "0.0.47",
     "@types/lusca": "^1.6.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^12.7.8",

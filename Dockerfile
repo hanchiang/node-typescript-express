@@ -24,6 +24,7 @@ ENV PATH /opt/node_app/node_modules/.bin:$PATH
 
 # copy in our source code last, as it changes the most
 COPY --chown=node:node . .
+RUN npm run build
 CMD [ "npm", "run", "debug" ]
 
 
