@@ -10,6 +10,9 @@ export const notFound = (req: Request, res: Response, next: NextFunction) => {
   });
 };
 
+/**
+ * Response interceptor
+ */
 export const formatResponse = (
   req: Request,
   res: Response,
