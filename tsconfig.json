@@ -4,7 +4,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
-    "noImplicitAny": true,
+    "noImplicitAny": false, // Might be overly stringent if this is set to true. Exercise judgement here
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
