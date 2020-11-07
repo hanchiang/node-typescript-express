@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "npm run serve",
-    "build": "npm run build-ts && npm run lint-fix && npm run prettier:fix",
+    "build": "npm run build-ts && npm run eslint:fix && npm run prettier:fix",
     "serve": "node dist/bin/www.js",
     "watch-node": "nodemon dist/bin/www.js",
     "test": "npm run test-unit && npm run test-integration",
