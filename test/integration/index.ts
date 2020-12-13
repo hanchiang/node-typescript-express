@@ -16,7 +16,7 @@ describe('Integration test', () => {
 
   afterEach(async () => {
     return new Promise((resolve) => {
-      server.close(resolve);
+      server.close(resolve as any);
     });
   });
 
