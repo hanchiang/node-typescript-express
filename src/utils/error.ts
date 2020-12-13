@@ -1,4 +1,4 @@
-import { ThrowError } from '../types/error';
+import { ThrowError, CustomError } from '../types/error';
 
 export enum ErrorCode {
   BAD_REQUEST = 400,
@@ -9,7 +9,7 @@ export enum ErrorCode {
 }
 
 export const throwError = (errObj: ThrowError) => {
-  const error: any = new Error(errObj.message);
+  const error: Partial<CustomError> = new Error(errObj.message);
   error.status = errObj.status;
   throw error;
 };
