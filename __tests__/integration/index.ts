@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import { Server } from 'http';
 import request from 'supertest';
 
@@ -22,8 +21,6 @@ describe('Integration test', () => {
 
   it('should pass', async () => {
     const res = await request(server).get('/').expect(200);
-    expect(res.body.payload.includes('Service is up and running')).to.equal(
-      true
-    );
+    expect(res.body.payload.includes('Service is up and running')).toBe(true);
   });
 });
